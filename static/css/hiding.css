@@ -1,0 +1,7 @@
+.hanzi-hide-container p {
+    visibility: hidden;
+}
+
+.hanzi-hide-container:hover .hanzi-container p {
+    visibility: visible;
+}

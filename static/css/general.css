@@ -1,0 +1,87 @@
+.content-container {
+    padding: 2.4em;
+}
+
+.words-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.word-table-container {
+    background-color: #F0F0F0;
+
+    border-width: 1px;
+    border-color: #CECECE;
+    border-style: solid;
+    border-radius: 3px;
+
+    padding: 0.2em;
+    /*flex-grow: 1; *//* all equal size */
+    margin: 0.2em;
+}
+
+.word-table {
+    border: none;
+    min-width: 14em;
+}
+
+.hanci-cell {
+    text-align: right;
+}
+
+.hanzi-container {
+    float: right;
+    background-image: url(/img/background.svg);
+    background-color: #FAFAFA;
+    background-size: contain;
+    line-height: 4em;
+    text-align: right;
+    border: 1px solid #909090;
+    width: 4em;
+    height: 4em;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 0.1em 0.1em 0.1em 0.1em;
+}
+
+.word-table td {
+    border-width: 1px;
+    border-color: #A0A0A0;
+    vertical-align: middle;
+}
+
+.word-table p {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.word-table td.hanci-cell {
+    text-align: right;
+}
+
+.word-table td.hanci-cell .hanzi-container p {
+    margin: auto;
+    font-family: WenQuanYi Micro Hei;
+    font-size: 3.6em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.word-table td.latinletters-cell div {
+    font-size: 1em;
+    margin: 0.4em 0.4em 0.4em 0.4em;
+    text-align: center;
+}
+
+.latinletters-cell p {
+    max-width: 10em;
+}
+
+
+
+.word-id-label {
+    font-size: 0.6em;
+    color: #808080;
+}
