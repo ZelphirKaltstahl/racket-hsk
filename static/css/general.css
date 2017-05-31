@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 .content-container {
     padding: 2.4em;
 }
@@ -31,8 +35,12 @@
     text-align: right;
 }
 
-.hanzi-container {
+.float-right-container {
     float: right;
+}
+
+.hanzi-container {
+    float: left;
     background-image: url(/img/background.svg);
     background-color: #FAFAFA;
     background-size: contain;
@@ -84,4 +92,11 @@
 .word-id-label {
     font-size: 0.6em;
     color: #808080;
+}
+
+.word-controls-image {
+    width: 1em;
+    height: 1em;
+    margin: 0.2em;
+    text-align: right;
 }

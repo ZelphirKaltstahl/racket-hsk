@@ -6,13 +6,20 @@
 
 (define DOCTYPE-HTML5 "<!DOCTYPE html>")
 
+(define (xexpr->xml/pretty x)
+  (string-trim
+   (with-output-to-string
+     (lambda ()
+       (display-xml/content (xexpr->xml x))))))
 
 (define (render-base-page
          #:content [content "NO CONTENT"]
          #:page-title [page-title "NO TITLE"]
          #:default-css-imports [default-css-imports (list "/css/general.css")]
          #:special-css-imports [special-css-imports empty]
-         #:default-js-imports [default-js-imports empty]
+         #:default-js-imports [default-js-imports
+                                (list "https://code.jquery.com/jquery-3.2.1.min.js"
+                                      "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js")]
          #:special-js-imports [special-js-imports empty]
          #:ajax [ajax empty]
          #:header [header ""]
@@ -28,7 +35,7 @@
   "Hi!" (br) "Bye!"))))
   (string-append DOCTYPE-HTML5
                  "\n\n"
-                 (xexpr->string
+                 (xexpr->xml/pretty
                   `(html
                     ,(render-head page-title
                                   default-css-imports

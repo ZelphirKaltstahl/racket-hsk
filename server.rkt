@@ -22,7 +22,7 @@
          "response.rkt"
          "render-base.rkt"
          "overview-app.rkt"
-         "hsk-1-app.rkt")
+         "hsk-app.rkt")
 ;; ====================
 ;; ROUTES MANAGING CODE
 ;; ====================
@@ -35,7 +35,13 @@
   (dispatch-rules [("") #:method "get" overview-app]
                   [("index") #:method "get" overview-app]
                   [("home") #:method "get" overview-app]
-                  [("hsk-1") #:method "get" hsk-1-app]))
+                  [("hsk") #:method "get" hsk-app]
+                  [("ajax" "hsk-1-data") #:method "get" hsk-1-data]
+                  [("ajax" "hsk-2-data") #:method "get" hsk-2-data]
+                  [("ajax" "hsk-3-data") #:method "get" hsk-3-data]
+                  [("ajax" "hsk-4-data") #:method "get" hsk-4-data]
+                  [("ajax" "hsk-5-data") #:method "get" hsk-5-data]
+                  [("ajax" "hsk-6-data") #:method "get" hsk-6-data]))
 
 ;; This procedure is still here, because it belongs to the main functionality of the whole page, to display a page, when something could not be found.
 (define (respond-unknown-file req)

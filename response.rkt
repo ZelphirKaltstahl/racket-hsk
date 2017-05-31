@@ -21,3 +21,7 @@
 
 (define (send-success-response rendered-page)
   (make-response rendered-page))
+
+(define (send-json-response json)
+  (make-response #:mime-type #"application/json"
+                 json))
